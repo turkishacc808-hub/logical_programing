@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2680" height="1480" viewBox="0 0 2680 1480">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+<polygon points="0 0, 10 4, 0 8" fill="#5f6368"/>
+</marker>
+</defs>
+<rect x="0" y="0" width="100%" height="100%" fill="#fafafa"/>
+<text x="40" y="42" font-family="DejaVu Sans, Arial" font-size="28" fill="#263238">Family Tree (British Royal Family)</text>
+<line x1="2285.0" y1="108.0" x2="1340.0" y2="217.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1865.0" y1="108.0" x2="1340.0" y2="217.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="2285.0" y1="108.0" x2="1550.0" y2="217.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1865.0" y1="108.0" x2="1550.0" y2="217.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1340.0" y1="273.0" x2="1235.0" y2="382.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="605.0" y1="108.0" x2="1235.0" y2="382.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1235.0" y1="438.0" x2="1130.0" y2="547.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1655.0" y1="108.0" x2="1130.0" y2="547.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1235.0" y1="438.0" x2="1340.0" y2="547.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1655.0" y1="108.0" x2="1340.0" y2="547.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1130.0" y1="603.0" x2="1130.0" y2="712.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1445.0" y1="108.0" x2="1130.0" y2="712.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1130.0" y1="603.0" x2="1550.0" y2="712.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1445.0" y1="108.0" x2="1550.0" y2="712.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1550.0" y1="273.0" x2="1445.0" y2="382.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1445.0" y1="438.0" x2="1550.0" y2="547.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1550.0" y1="603.0" x2="1340.0" y2="712.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="2075.0" y1="108.0" x2="1340.0" y2="712.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1130.0" y1="768.0" x2="1025.0" y2="877.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1340.0" y1="768.0" x2="1025.0" y2="877.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1130.0" y1="768.0" x2="1655.0" y2="877.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1340.0" y1="768.0" x2="1655.0" y2="877.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1130.0" y1="768.0" x2="1235.0" y2="877.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1340.0" y1="768.0" x2="1235.0" y2="877.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1130.0" y1="768.0" x2="1445.0" y2="877.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1340.0" y1="768.0" x2="1445.0" y2="877.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1025.0" y1="933.0" x2="1235.0" y2="1042.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1025.0" y1="108.0" x2="1235.0" y2="1042.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1025.0" y1="933.0" x2="1025.0" y2="1042.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1025.0" y1="108.0" x2="1025.0" y2="1042.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1235.0" y1="1098.0" x2="1130.0" y2="1207.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="815.0" y1="108.0" x2="1130.0" y2="1207.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1235.0" y1="1098.0" x2="1550.0" y2="1207.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="815.0" y1="108.0" x2="1550.0" y2="1207.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1235.0" y1="1098.0" x2="1340.0" y2="1207.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="815.0" y1="108.0" x2="1340.0" y2="1207.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1235.0" y1="933.0" x2="1445.0" y2="1042.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="2495.0" y1="108.0" x2="1445.0" y2="1042.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1235.0" y1="933.0" x2="1655.0" y2="1042.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="2495.0" y1="108.0" x2="1655.0" y2="1042.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1445.0" y1="1098.0" x2="1760.0" y2="1207.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1235.0" y1="108.0" x2="1760.0" y2="1207.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1445.0" y1="1098.0" x2="920.0" y2="1207.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="1235.0" y1="108.0" x2="920.0" y2="1207.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="395.0" y1="108.0" x2="1130.0" y2="217.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="395.0" y1="108.0" x2="1130.0" y2="217.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<line x1="185.0" y1="108.0" x2="1130.0" y2="217.0" stroke="#5f6368" stroke-width="1.8" marker-end="url(#arrow)" opacity="0.75"/>
+<rect x="103.0" y="52.0" width="164" height="56" rx="9" ry="9" fill="#cfd8dc" stroke="#263238" stroke-width="1.1"/>
+<text x="185.0" y="84.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">P</text>
+<rect x="1048.0" y="217.0" width="164" height="56" rx="9" ry="9" fill="#cfd8dc" stroke="#263238" stroke-width="1.1"/>
+<text x="1130.0" y="249.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">Y</text>
+<rect x="313.0" y="52.0" width="164" height="56" rx="9" ry="9" fill="#cfd8dc" stroke="#263238" stroke-width="1.1"/>
+<text x="395.0" y="84.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">Z</text>
+<ellipse cx="605.0" cy="80.0" rx="86" ry="29" fill="#f8bbd0" stroke="#263238" stroke-width="1.1"/>
+<text x="605.0" y="84.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">alexandra of denmark (1844)</text>
+<ellipse cx="920.0" cy="1235.0" rx="86" ry="29" fill="#f8bbd0" stroke="#263238" stroke-width="1.1"/>
+<text x="920.0" y="1239.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">athena mapelli mozzi (2025)</text>
+<ellipse cx="815.0" cy="80.0" rx="86" ry="29" fill="#f8bbd0" stroke="#263238" stroke-width="1.1"/>
+<text x="815.0" y="84.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">catherine middleton (1982)</text>
+<rect x="943.0" y="877.0" width="164" height="56" rx="9" ry="9" fill="#bbdefb" stroke="#263238" stroke-width="1.1"/>
+<text x="1025.0" y="909.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">charles iii (1948)</text>
+<ellipse cx="1025.0" cy="80.0" rx="86" ry="29" fill="#f8bbd0" stroke="#263238" stroke-width="1.1"/>
+<text x="1025.0" y="84.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">diana spencer (1961)</text>
+<rect x="1153.0" y="52.0" width="164" height="56" rx="9" ry="9" fill="#bbdefb" stroke="#263238" stroke-width="1.1"/>
+<text x="1235.0" y="84.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">edoardo mapelli mozzi</text>
+<rect x="1258.0" y="217.0" width="164" height="56" rx="9" ry="9" fill="#bbdefb" stroke="#263238" stroke-width="1.1"/>
+<text x="1340.0" y="249.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">edward vii (1841)</text>
+<ellipse cx="1445.0" cy="80.0" rx="86" ry="29" fill="#f8bbd0" stroke="#263238" stroke-width="1.1"/>
+<text x="1445.0" y="84.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">elizabeth bowes lyon (1900)</text>
+<ellipse cx="1130.0" cy="740.0" rx="86" ry="29" fill="#f8bbd0" stroke="#263238" stroke-width="1.1"/>
+<text x="1130.0" y="744.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">elizabeth ii (1926)</text>
+<rect x="1153.0" y="382.0" width="164" height="56" rx="9" ry="9" fill="#bbdefb" stroke="#263238" stroke-width="1.1"/>
+<text x="1235.0" y="414.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">george v (1865)</text>
+<rect x="1048.0" y="547.0" width="164" height="56" rx="9" ry="9" fill="#bbdefb" stroke="#263238" stroke-width="1.1"/>
+<text x="1130.0" y="579.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">george vi (1895)</text>
+<ellipse cx="1655.0" cy="80.0" rx="86" ry="29" fill="#f8bbd0" stroke="#263238" stroke-width="1.1"/>
+<text x="1655.0" y="84.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">mary of teck (1867)</text>
+<rect x="1783.0" y="52.0" width="164" height="56" rx="9" ry="9" fill="#bbdefb" stroke="#263238" stroke-width="1.1"/>
+<text x="1865.0" y="84.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">prince albert (1819)</text>
+<rect x="1153.0" y="877.0" width="164" height="56" rx="9" ry="9" fill="#bbdefb" stroke="#263238" stroke-width="1.1"/>
+<text x="1235.0" y="909.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">prince andrew (1960)</text>
+<rect x="1993.0" y="52.0" width="164" height="56" rx="9" ry="9" fill="#bbdefb" stroke="#263238" stroke-width="1.1"/>
+<text x="2075.0" y="84.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">prince andrew greece (1882)</text>
+<rect x="1363.0" y="877.0" width="164" height="56" rx="9" ry="9" fill="#bbdefb" stroke="#263238" stroke-width="1.1"/>
+<text x="1445.0" y="909.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">prince edward (1964)</text>
+<rect x="1048.0" y="1207.0" width="164" height="56" rx="9" ry="9" fill="#bbdefb" stroke="#263238" stroke-width="1.1"/>
+<text x="1130.0" y="1239.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">prince george (2013)</text>
+<rect x="943.0" y="1042.0" width="164" height="56" rx="9" ry="9" fill="#bbdefb" stroke="#263238" stroke-width="1.1"/>
+<text x="1025.0" y="1074.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">prince harry (1984)</text>
+<rect x="1258.0" y="547.0" width="164" height="56" rx="9" ry="9" fill="#bbdefb" stroke="#263238" stroke-width="1.1"/>
+<text x="1340.0" y="579.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">prince henry gloucester (1900)</text>
+<rect x="1258.0" y="1207.0" width="164" height="56" rx="9" ry="9" fill="#bbdefb" stroke="#263238" stroke-width="1.1"/>
+<text x="1340.0" y="1239.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">prince louis (2018)</text>
+<rect x="1258.0" y="712.0" width="164" height="56" rx="9" ry="9" fill="#bbdefb" stroke="#263238" stroke-width="1.1"/>
+<text x="1340.0" y="744.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">prince philip (1921)</text>
+<rect x="1153.0" y="1042.0" width="164" height="56" rx="9" ry="9" fill="#bbdefb" stroke="#263238" stroke-width="1.1"/>
+<text x="1235.0" y="1074.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">prince william (1982)</text>
+<ellipse cx="1550.0" cy="575.0" rx="86" ry="29" fill="#f8bbd0" stroke="#263238" stroke-width="1.1"/>
+<text x="1550.0" y="579.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">princess alice battenberg (1885)</text>
+<ellipse cx="1550.0" cy="245.0" rx="86" ry="29" fill="#f8bbd0" stroke="#263238" stroke-width="1.1"/>
+<text x="1550.0" y="249.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">princess alice uk (1843)</text>
+<ellipse cx="1655.0" cy="905.0" rx="86" ry="29" fill="#f8bbd0" stroke="#263238" stroke-width="1.1"/>
+<text x="1655.0" y="909.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">princess anne (1950)</text>
+<ellipse cx="1445.0" cy="1070.0" rx="86" ry="29" fill="#f8bbd0" stroke="#263238" stroke-width="1.1"/>
+<text x="1445.0" y="1074.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">princess beatrice (1988)</text>
+<ellipse cx="1550.0" cy="1235.0" rx="86" ry="29" fill="#f8bbd0" stroke="#263238" stroke-width="1.1"/>
+<text x="1550.0" y="1239.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">princess charlotte (2015)</text>
+<ellipse cx="1655.0" cy="1070.0" rx="86" ry="29" fill="#f8bbd0" stroke="#263238" stroke-width="1.1"/>
+<text x="1655.0" y="1074.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">princess eugenie (1990)</text>
+<ellipse cx="1550.0" cy="740.0" rx="86" ry="29" fill="#f8bbd0" stroke="#263238" stroke-width="1.1"/>
+<text x="1550.0" y="744.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">princess margaret (1930)</text>
+<ellipse cx="2285.0" cy="80.0" rx="86" ry="29" fill="#f8bbd0" stroke="#263238" stroke-width="1.1"/>
+<text x="2285.0" y="84.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">queen victoria (1819)</text>
+<ellipse cx="2495.0" cy="80.0" rx="86" ry="29" fill="#f8bbd0" stroke="#263238" stroke-width="1.1"/>
+<text x="2495.0" y="84.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">sarah ferguson (1959)</text>
+<ellipse cx="1760.0" cy="1235.0" rx="86" ry="29" fill="#f8bbd0" stroke="#263238" stroke-width="1.1"/>
+<text x="1760.0" y="1239.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">sienna mapelli mozzi (2021)</text>
+<ellipse cx="1445.0" cy="410.0" rx="86" ry="29" fill="#f8bbd0" stroke="#263238" stroke-width="1.1"/>
+<text x="1445.0" y="414.0" text-anchor="middle" font-family="DejaVu Sans, Arial" font-size="12" fill="#1f2937">victoria hesse (1863)</text>
+</svg>

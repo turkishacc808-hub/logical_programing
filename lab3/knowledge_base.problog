@@ -1,0 +1,146 @@
+% knowledge_base.problog
+% Вероятностная база знаний кардиологической диагностики (ProbLog)
+% Использует аннотированные дизъюнкции и вероятностные факты.
+%
+% Семантика: каждое правило представлено как вероятностный факт.
+% Итоговая вероятность диагноза вычисляется через inference engine ProbLog.
+
+% ============================================================
+% Вероятностные факты — наличие симптомов у пациента
+% (в реальном использовании задаются как evidence)
+% ============================================================
+
+% Клинические признаки (базовые априорные вероятности)
+0.15::chest_pain.
+0.20::dyspnea.
+0.18::tachycardia.
+0.08::bradycardia.
+0.12::peripheral_edema.
+0.30::fatigue.
+0.15::palpitations.
+0.06::syncope.
+0.25::elevated_bp.
+0.10::low_bp.
+0.05::cyanosis.
+0.10::diaphoresis.
+0.04::st_elevation.
+0.10::irregular_rhythm.
+0.03::friction_rub.
+
+% ============================================================
+% Правила диагностики с аннотированными дизъюнкциями
+% Синтаксис: P::head :- body.
+% ============================================================
+
+% --- Ишемическая болезнь сердца (cad) ---
+0.85::fires_cad_r1 :- chest_pain, dyspnea, fatigue.
+0.80::fires_cad_r2 :- chest_pain, elevated_bp, tachycardia.
+0.70::fires_cad_r3 :- chest_pain, diaphoresis, dyspnea.
+0.65::fires_cad_r4 :- fatigue, dyspnea, elevated_bp.
+
+% --- Сердечная недостаточность (heart_failure) ---
+0.88::fires_hf_r1 :- dyspnea, peripheral_edema, fatigue.
+0.82::fires_hf_r2 :- dyspnea, cyanosis, peripheral_edema.
+0.75::fires_hf_r3 :- tachycardia, peripheral_edema, fatigue.
+0.68::fires_hf_r4 :- dyspnea, low_bp, fatigue.
+
+% --- Аритмия (arrhythmia) ---
+0.90::fires_arr_r1 :- palpitations, irregular_rhythm, syncope.
+0.85::fires_arr_r2 :- tachycardia, palpitations, irregular_rhythm.
+0.78::fires_arr_r3 :- bradycardia, syncope, fatigue.
+0.65::fires_arr_r4 :- palpitations, dyspnea, irregular_rhythm.
+
+% --- Гипертоническая болезнь (hypertension) ---
+0.87::fires_htn_r1 :- elevated_bp, chest_pain, fatigue.
+0.80::fires_htn_r2 :- elevated_bp, tachycardia, palpitations.
+0.75::fires_htn_r3 :- elevated_bp, dyspnea, fatigue.
+0.60::fires_htn_r4 :- elevated_bp, peripheral_edema, fatigue.
+
+% --- Инфаркт миокарда (myocardial_infarction) ---
+0.95::fires_mi_r1 :- chest_pain, st_elevation, diaphoresis.
+0.92::fires_mi_r2 :- chest_pain, st_elevation, low_bp.
+0.88::fires_mi_r3 :- chest_pain, diaphoresis, low_bp, cyanosis.
+0.78::fires_mi_r4 :- chest_pain, dyspnea, st_elevation, tachycardia.
+
+% --- Перикардит (pericarditis) ---
+0.93::fires_peri_r1 :- chest_pain, friction_rub, dyspnea.
+0.87::fires_peri_r2 :- friction_rub, tachycardia, fatigue.
+0.80::fires_peri_r3 :- chest_pain, friction_rub, elevated_bp.
+0.72::fires_peri_r4 :- friction_rub, diaphoresis, fatigue.
+
+% ============================================================
+% Логические следствия: диагноз активируется при срабатывании
+% хотя бы одного соответствующего правила
+% ============================================================
+
+cad                   :- fires_cad_r1.
+cad                   :- fires_cad_r2.
+cad                   :- fires_cad_r3.
+cad                   :- fires_cad_r4.
+
+heart_failure         :- fires_hf_r1.
+heart_failure         :- fires_hf_r2.
+heart_failure         :- fires_hf_r3.
+heart_failure         :- fires_hf_r4.
+
+arrhythmia            :- fires_arr_r1.
+arrhythmia            :- fires_arr_r2.
+arrhythmia            :- fires_arr_r3.
+arrhythmia            :- fires_arr_r4.
+
+hypertension          :- fires_htn_r1.
+hypertension          :- fires_htn_r2.
+hypertension          :- fires_htn_r3.
+hypertension          :- fires_htn_r4.
+
+myocardial_infarction :- fires_mi_r1.
+myocardial_infarction :- fires_mi_r2.
+myocardial_infarction :- fires_mi_r3.
+myocardial_infarction :- fires_mi_r4.
+
+pericarditis          :- fires_peri_r1.
+pericarditis          :- fires_peri_r2.
+pericarditis          :- fires_peri_r3.
+pericarditis          :- fires_peri_r4.
+
+% ============================================================
+% Взаимные исключения через аннотированные дизъюнкции
+% Семантика: одновременно не могут быть истинны оба диагноза
+% ============================================================
+
+% Инфаркт миокарда исключает ИБС (ИМ — острая фаза ИБС)
+0.01::cad_not_mi :- myocardial_infarction.
+:- cad, myocardial_infarction, \+ cad_not_mi.
+
+% Перикардит исключает сердечную недостаточность
+0.01::peri_not_hf :- pericarditis.
+:- pericarditis, heart_failure, \+ peri_not_hf.
+
+% ============================================================
+% Запросы (evidence/query examples)
+% ============================================================
+
+% Пример 1: классическая картина ИМ
+% evidence(chest_pain, true).
+% evidence(st_elevation, true).
+% evidence(diaphoresis, true).
+% query(myocardial_infarction).   % ожидаемая вероятность > 0.95
+
+% Пример 2: картина перикардита
+% evidence(chest_pain, true).
+% evidence(friction_rub, true).
+% evidence(dyspnea, true).
+% query(pericarditis).            % ожидаемая вероятность > 0.93
+
+% Пример 3: аритмия
+% evidence(palpitations, true).
+% evidence(irregular_rhythm, true).
+% evidence(syncope, true).
+% query(arrhythmia).              % ожидаемая вероятность > 0.90
+
+% Пример 4: конфликтный случай (ИМ vs перикардит)
+% evidence(chest_pain, true).
+% evidence(st_elevation, true).
+% evidence(friction_rub, true).
+% query(myocardial_infarction).
+% query(pericarditis).

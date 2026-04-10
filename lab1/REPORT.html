@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>Отчет ЛР1</title>
+<style>
+@page {
+  size: A4;
+  margin: 20mm 15mm 20mm 30mm;
+}
+body {
+  font-family: "Times New Roman", serif;
+  font-size: 13pt;
+  line-height: 1.38;
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3 {
+  font-weight: normal;
+  text-align: left;
+  margin-top: 12pt;
+  margin-bottom: 6pt;
+  text-indent: 0;
+}
+h1 {
+  text-align: center;
+  font-size: 15pt;
+  margin-top: 0;
+}
+h2 { font-size: 13pt; }
+h3 { font-size: 13pt; }
+p {
+  margin: 0 0 6pt 0;
+  text-indent: 1.25cm;
+}
+ul, ol {
+  margin: 0 0 6pt 0;
+  padding-left: 1.25cm;
+}
+li {
+  margin: 0 0 3pt 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 4pt 0 8pt 0;
+  page-break-inside: avoid;
+}
+td {
+  width: 50%;
+  vertical-align: top;
+  padding: 4pt;
+}
+table img {
+  width: 88%;
+  margin: 4pt auto;
+  display: block;
+}
+.tree-figure {
+  margin: 6pt 0 8pt 0;
+  text-indent: 0;
+}
+.tree-image {
+  width: 68%;
+  margin: 0 auto;
+  display: block;
+}
+code, pre {
+  font-family: "Courier New", monospace;
+  font-size: 10pt;
+}
+pre {
+  text-indent: 0;
+  margin: 4pt 0 8pt 0;
+  padding: 6pt;
+  border: 1px solid #ccc;
+  white-space: pre-wrap;
+}
+.img-block {
+  margin: 6pt 0 10pt 0;
+  text-indent: 0;
+  page-break-inside: avoid;
+}
+img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #888;
+  image-rendering: auto;
+}
+</style>
+</head>
+<body>
+<h1>Лабораторная работа №1 по дисциплине «Логическое программирование»</h1>
+<h2>Тема</h2>
+<p>Генеалогические отношения и рекурсивный вывод на языке Prolog.</p>
+<h2>1. Описание предметной области (чьё дерево)</h2>
+<p>В качестве предметной области выбрано <strong>реальное семейное древо британской королевской семьи</strong> с фокусом на Елизавету II.</p>
+<p>В базу знаний включены:
+- предки Елизаветы II (ветка от королевы Виктории);
+- её супруг (принц Филипп) и его предковая линия;
+- потомки Елизаветы II (Карл III, Уильям, Гарри и др.);
+- боковая ветка семьи (ветка принца Эндрю: Беатрис, Евгения и дети Беатрис).</p>
+<p>База покрывает более 30 реальных персон и более 7 поколений.</p>
+<h2>2. Структура базы знаний (факты и атрибуты)</h2>
+<p>Основной файл: <code>family.pl</code>.</p>
+<h3>2.1. Базовые факты</h3>
+<ul>
+<li><code>muzhchina/1</code> - факт о мужском поле персоны;</li>
+<li><code>zhenshchina/1</code> - факт о женском поле персоны;</li>
+<li><code>roditel/2</code> - отношение родитель -&gt; ребёнок.</li>
+</ul>
+<h3>2.2. Расширенные атрибуты (уровень 2)</h3>
+<ul>
+<li><code>data_rozhdeniya/2</code> - дата рождения <code>date(Year,Month,Day)</code>;</li>
+<li><code>data_smerti/2</code> - дата смерти;</li>
+<li><code>mesto_rozhdeniya/2</code> - место рождения;</li>
+<li><code>professiya/2</code> - роль/профессия (например, <code>monarch</code>, <code>royal</code>).</li>
+</ul>
+<h3>2.3. Организация данных</h3>
+<ul>
+<li>данные записаны в виде атомов в <code>snake_case</code>;</li>
+<li>родственные связи задаются только через <code>roditel/2</code>, остальные отношения выводятся правилами;</li>
+<li>рекурсивные правила строятся от базового случая «родитель» к произвольной глубине.</li>
+</ul>
+<h2>3. Список реализованных предикатов с сигнатурами</h2>
+<h3>3.1. Предикаты уровня 1</h3>
+<ul>
+<li><code>mat(X, Y)</code> - X мать Y;</li>
+<li><code>otets(X, Y)</code> - X отец Y;</li>
+<li><code>dedushka(X, Y)</code> - X дедушка Y;</li>
+<li><code>babushka(X, Y)</code> - X бабушка Y;</li>
+<li><code>brat(X, Y)</code> - X брат Y;</li>
+<li><code>sestra(X, Y)</code> - X сестра Y;</li>
+<li><code>dyadya(X, Y)</code> - X дядя Y;</li>
+<li><code>tyotya(X, Y)</code> - X тётя Y;</li>
+<li><code>predok(X, Y)</code> - X предок Y (рекурсивно);</li>
+<li><code>potomok(X, Y)</code> - X потомок Y (через <code>predok/2</code>);</li>
+<li><code>dvoyurodny_brat(X, Y)</code> - X двоюродный брат Y;</li>
+<li><code>troyurodnaya_sestra(X, Y)</code> - X троюродная сестра Y.</li>
+</ul>
+<h3>3.2. Предикаты уровня 2 (анализ и валидация)</h3>
+<ul>
+<li><code>pokolenie(P, N)</code> - номер поколения персоны P;</li>
+<li><code>obshchiy_predok(X, Y, A)</code> - ближайший общий предок A для X и Y;</li>
+<li><code>stepen_rodstva(X, Y, D)</code> - минимальное расстояние между X и Y в графе родства;</li>
+<li><code>net_ciklov</code> - проверка отсутствия циклов в дереве;</li>
+<li><code>logichny_vozrasti</code> - проверка, что родитель старше ребёнка как минимум на 12 лет;</li>
+<li><code>net_konfliktov_predkov</code> - отсутствие конфликтов «персона является своим предком».</li>
+</ul>
+<h3>3.3. Предикаты уровня 3</h3>
+<ul>
+<li><code>opisanie_rodstva(X, Y, Text)</code> - генерация текстового описания родства;</li>
+<li><code>eksport_v_dot(FilePath)</code> - экспорт графа родства в формат DOT;</li>
+<li><code>vse_puti_mezhdu(X, Y, Path)</code> - поиск всех путей между двумя персонами.</li>
+</ul>
+<h2>4. Примеры работы (скриншоты 5-7 запросов в REPL)</h2>
+<p>Скриншоты окна SWI-Prolog:</p>
+<table>
+  <tr>
+    <td>
+      <img src="screenshots/query1_predok.svg" alt="Запрос 1" />
+    </td>
+    <td>
+      <img src="screenshots/query2_dyadya.svg" alt="Запрос 2" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="screenshots/query4_common_ancestor.svg" alt="Запрос 3" />
+    </td>
+    <td>
+      <img src="screenshots/query5_distance.svg" alt="Запрос 4" />
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <img src="screenshots/query7_path.svg" alt="Запрос 5" />
+    </td>
+  </tr>
+</table>
+
+<h2>5. Визуализация дерева (уровень 3)</h2>
+<p>Для визуализации используется скрипт <code>visualize_family.py</code> (интеграция Python + Prolog через <code>pyswip</code>, отрисовка через <code>networkx</code> и <code>matplotlib</code>).</p>
+<p>Команда запуска:</p>
+<pre><code class="language-bash">python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python3 visualize_family.py --prolog family.pl --output family_tree.png --dot family_tree.dot
+</code></pre>
+<p>Результат визуализации:</p>
+<div class="tree-figure"><img src="family_tree.png" alt="Визуализация семейного дерева" class="tree-image" /></div>
+
+<h2>6. Использованные интернет-источники</h2>
+<ul>
+<li>ГОСТ 7.32-2017 (карточка стандарта): https://allgosts.ru/01/140/gost_7.32-2017</li>
+<li>ГОСТ 7.32-2017 (текст в справочной системе): https://docs.cntd.ru/document/1200157208</li>
+<li>Wikipedia, Elizabeth II: https://en.wikipedia.org/wiki/Elizabeth_II</li>
+<li>Wikipedia, Charles III: https://en.wikipedia.org/wiki/Charles_III</li>
+<li>Wikipedia, Queen Victoria: https://en.wikipedia.org/wiki/Queen_Victoria</li>
+<li>Wikipedia, Prince Philip: https://en.wikipedia.org/wiki/Prince_Philip,_Duke_of_Edinburgh</li>
+<li>Britannica, George VI: https://www.britannica.com/biography/George-VI</li>
+<li>Royal.uk (официальные профили): https://www.royal.uk/</li>
+</ul>
+</body>
+</html>
