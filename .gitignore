@@ -1,0 +1,23 @@
+# Python virtual environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+missfont.log
+
+# IDE and OS files
+.DS_Store
+.idea/
+.vscode/
+
+# Ignore testing caches
+.pytest_cache/
